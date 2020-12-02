@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+svg{
+    height: 40px;
+    width: 40px;
+}
+.hero-text{
+    background-color: darkgray;
+}
+
+.icon-bar{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    z-index: 10;
+}
+
+.icon-bar a{
+    text-decoration: none;
+    width: 200px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:5px;
+    transform: translateX(-160px);
+    -webkit-transform: translateX(-160px);
+    -ms-transform: translateX(-160px);
+
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.3s linear;
+}
+
+.facebook{
+    background: #3b5999;
+}
+.twitter{
+    background: #00aced;
+}
+.google{
+    background: #DB4437;
+}
+.youtube{
+    background: #cd201f;
+}
+.linkedin{
+    background: #0077b5;
+}
+.icon-bar a:hover{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+}
+
+.icon-bar a i{
+    padding-left: 20px;
+    font-size: 30px !important;
+    animation: letszoom 3s linear alternate-reverse infinite;
+}
+
+@keyframes letszoom{
+    from{
+        transform: scale(0.6);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.covidtable{
+    font-size: small;
+    border-color: darkolivegreen;
+}
+
+table tr td a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Animation */
+
+#social-distance:hover{
+    animation-name: sd;
+    animation-duration: 3s;
+}
+@keyframes sd{
+    0%{
+        opacity: 0%;
+        scale: 100%;
+    }
+    100%{
+       opacity: 100%;
+       scale: 110%;
+}

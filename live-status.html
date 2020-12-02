@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 | INDIA | Live</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">COVID-19 TRACKER | INDIA</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="live-status.html">Live Status</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="chart.html">Chart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="myth.html">Myth</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Live Status</li>
+        </ol>
+      </nav>
+
+
+
+      <div class="container my-4">
+        <div class="row text-center">
+            <div class="col-3 text-warning">
+                <h5>Confirmed</h5>
+                <p id="confirmed"></p>
+            </div>
+            <div class="col-3 text-info">
+                <h5>Active</h5>
+                <p id="active"></p>
+            </div>
+            <div class="col-3 text-success">
+                <h5>Recovered</h5>
+                <p id="recovered"></p>
+            </div>
+            <div class="col-3 text-danger">
+                <h5>Deceased</h5>
+                <p id="deaths"></p>
+            </div>
+        </div>
+
+      <!-- data Table -->
+      <div class="container my-3">
+        <input type="text" id="myInput" placeholder="State Name" style="text-align: center; font-weight: bolder;" class="form-control d-block w-100" onkeyup="searchFun()">
+      </div>
+      <div class="container">
+        <table class="table table-bordered table-striped covidtable" id="covid_table">
+          <tr>
+            <th style="color: purple;">State</th>
+            <th style="color: red;">Confirmed</th>
+            <th style="color: red;">New Cases</th>
+            <th style="color: cornflowerblue;">Active</th>
+            <th style="color: green;">Recovered</th>
+            <th style="color: green;">New Recovered</th>
+            <th style="color: grey;">Death</th>
+            <th style="color: grey;">New Death</th>                
+          </tr>
+      </table>
+      </div>
+          
+
+      <!-- data Table End -->
+      <footer>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <div class="container">
+            <a class="navbar-brand" href="#">COVID-19 TRACKER | INDIA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <p>Designed and Developed &#169; KC Studio</p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="live-status.html">Live Status</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="chart.html">Chart</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="myth.html">Myth</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </div>
+          </div>
+        </nav>
+       </footer>   
+
+      
+      
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <!-- JavaScript and dependencies -->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+      <script src="js/script.js"></script>
+      <script>
+        const searchFun = () =>{
+          let filter = document.getElementById('myInput').value.toUpperCase();
+          let myTable = document.getElementById('covid_table');
+          let tr = myTable.getElementsByTagName('tr');
+
+          for(var i = 0 ; i<tr.length ; i++){
+            let td = tr[i].getElementsByTagName('td')[0];
+
+            if(td){
+              let textvalue = td.textContent || td.innerHTML;
+              if(textvalue.toUpperCase().indexOf(filter) > -1){
+                tr[i].style.display= "";
+              }else{
+                tr[i].style.display = "none" ;
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>
